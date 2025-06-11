@@ -15,7 +15,7 @@ Le site comprend huit pages HTML intégrant du CSS pour une présentation claire
 - `valider.html` : Confirmation de commande  
 
 ## Installation
-Le site est entièrement statique. Pour le consulter, il suffit d’ouvrir les fichiers `.html` dans un navigateur web récent (Chrome, Firefox, Edge…).
+Le site est entièrement statique. Pour le consulter, il suffit d’ouvrir les fichiers `accueil.html` dans un navigateur web récent (Chrome, Firefox, Edge…).
 
 ## Utilisation
 Naviguez entre les pages via le menu de navigation présent sur chaque page.  
@@ -26,7 +26,7 @@ Sur la page `commander.html`, remplissez le formulaire de commande et validez po
 - CSS3 (intégré dans chaque page HTML)
 
 ## Auteur
-[ Ton Nom ]
+[ Hardy Putshu Tshimanga  ]
 
 ## Licence
 Projet réalisé dans le cadre d’un cours universitaire (L1 LMD). Utilisation à titre pédagogique uniquement.
