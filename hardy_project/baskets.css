@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HARDY BUSINESS - Vente de baskets</title>
+  <style>
+    /* Reset simple */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9; /* fond très clair */
+      color: #333;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    h1.big_title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 8px;
+      color: #222;
+    }
+
+    /* Ligne fine grise sous le titre */
+    h1.big_title::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: #ccc;
+      margin: 8px auto 0 auto;
+      border-radius: 2px;
+    }
+
+    h2 {
+      font-weight: 500;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    /* Grille responsive */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 24px;
+    }
+
+    /* Carte produit */
+    .product {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      padding: 15px;
+      transition: box-shadow 0.3s ease;
+      cursor: default;
+    }
+
+    .product:hover {
+      box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    /* Bouton commander */
+    .product button {
+      background-color: #e07a9b;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 2px 6px rgba(224, 122, 155, 0.5);
+    }
+
+    .product button:hover {
+      background-color: #c0657f;
+      box-shadow: 0 4px 10px rgba(192, 101, 127, 0.6);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      h1.big_title {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="big_title">HARDY BUSINESS</h1>
+    <h2>KETCHS (BASKETS)</h2>
+
+    <div class="grid-container">
+      <div class="product">
+        <img src="img1.jpg" alt="Basket pour homme" />
+        <button>Commander</button>
+      </div>
+      <div class="product">
+        <img src="img2.jpg" alt="Basket pour homme" />
+        <button>Commander</button>
+      </div>
+      <div class="product">
+        <img src="img3.jpg" alt="Basket pour homme" />
+        <button>Commander</button>
+      </div>
+      <!-- Ajoute les autres produits ici -->
+    </div>
+  </div>
+</body>
+</html>

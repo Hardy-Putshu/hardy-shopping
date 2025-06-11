@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Commande de basket</title>
+
+  <!-- Import de la police Poppins depuis Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0b0b0b;
+      color: #eaeaea;
+      position: relative;
+      overflow-x: hidden;
+      padding: 20px;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: -100px;
+      left: -100px;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 25% 30%, rgba(255, 100, 150, 0.15), transparent 40%),
+                  radial-gradient(circle at 70% 70%, rgba(255, 150, 200, 0.1), transparent 40%);
+      filter: blur(60px);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .topbar {
+      width: 100%;
+      padding: 15px 30px;
+      background-color: #1a1a1a;
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .topbar .left,
+    .topbar .right {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 60px auto 40px;
+      background-color: #222;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(255, 100, 150, 0.15);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: #ff7fae;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #ddd;
+    }
+
+    label span.obligatoire {
+      color: #ff7fae;
+      margin-left: 4px;
+      font-weight: 700;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #555;
+      background-color: #333;
+      color: #eee;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #999;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #ff7fae;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-weight: 700;
+    }
+
+    button:hover {
+      background-color: #ff5c96;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="left">COMMANDE</div>
+    <div class="right">HARDY SHOPPING</div>
+  </header>
+
+  <div class="container">
+    <h1>Commande</h1>
+
+    <form action="valider.html" method="GET" id="commandeForm">
+
+      <label for="taille_basket">Taille basket</label>
+      <select id="taille_basket" name="taille_basket">
+        <option value="">-- Sélectionner une taille de basket --</option>
+        <option value="36">36</option>
+        <option value="37">37</option>
+        <option value="38">38</option>
+        <option value="39">39</option>
+        <option value="40">40</option>
+        <option value="41">41</option>
+        <option value="42">42</option>
+        <option value="43">43</option>
+        <option value="44">44</option>
+        <option value="45">45</option>
+      </select>
+
+      <label for="taille_vetement">Taille vêtement</label>
+      <select id="taille_vetement" name="taille_vetement">
+        <option value="">-- Sélectionner une taille de vêtement --</option>
+        <option value="XS">XS</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+        <option value="XXL">XXL</option>
+      </select>
+
+      <label for="couleur">Couleur <span class="obligatoire">*</span></label>
+      <input type="text" id="couleur" name="couleur" required placeholder="Ex : noir, blanc, rouge..."
+        oninvalid="this.setCustomValidity('Veuillez indiquer une couleur')"
+        oninput="this.setCustomValidity('')" />
+
+      <label for="quantite">Quantité <span class="obligatoire">*</span></label>
+      <input type="number" id="quantite" name="quantite" min="1" value="1" required
+        oninvalid="this.setCustomValidity('Veuillez saisir une quantité valide')"
+        oninput="this.setCustomValidity('')" />
+
+      <label for="nom">Nom complet <span class="obligatoire">*</span></label>
+      <input type="text" id="nom" name="nom" required
+        oninvalid="this.setCustomValidity('Veuillez saisir votre nom complet')"
+        oninput="this.setCustomValidity('')" />
+
+      <label for="adresse">Adresse de livraison <span class="obligatoire">*</span></label>
+      <textarea id="adresse" name="adresse" rows="3" required
+        oninvalid="this.setCustomValidity('Veuillez saisir votre adresse')"
+        oninput="this.setCustomValidity('')"></textarea>
+
+      <label for="tel">Téléphone <span class="obligatoire">*</span></label>
+      <input type="tel" id="tel" name="tel" required placeholder="+243..."
+        oninvalid="this.setCustomValidity('Veuillez saisir un numéro de téléphone valide')"
+        oninput="this.setCustomValidity('')" />
+
+      <button type="submit">Confirmer la commande</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('commandeForm').addEventListener('submit', function (e) {
+      const couleurInput = document.getElementById('couleur');
+      const couleursValides = ['noir', 'blanc', 'rouge', 'bleu'];
+      const valeur = couleurInput.value.trim().toLowerCase();
+
+      if (!couleursValides.includes(valeur)) {
+        e.preventDefault();
+        couleurInput.setCustomValidity("Veuillez saisir une couleur valide parmi : noir, blanc, rouge, bleu");
+        couleurInput.reportValidity();
+      }
+    });
+  </script>
+</body>
+</html>

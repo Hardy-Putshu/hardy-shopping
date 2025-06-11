@@ -1,0 +1,42 @@
+/* Petits cercles lumineux dans le coin supérieur droit */
+body::after {
+  content: "";
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 120px;
+  height: 120px;
+  background:
+    radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 3px),
+    radial-gradient(circle, rgba(255,255,255,0.10) 1.5px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1.5px);
+  background-repeat: no-repeat;
+  background-position:
+    10px 10px,
+    40px 30px,
+    80px 90px;
+  pointer-events: none;
+  z-index: 0;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3));
+}
+
+/* Petits cercles lumineux dans le coin inférieur gauche */
+.corner-dots {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 120px;
+  height: 120px;
+  background:
+    radial-gradient(circle, rgba(255,255,255,0.12) 2.5px, transparent 3.5px),
+    radial-gradient(circle, rgba(255,255,255,0.08) 1.5px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.10) 1px, transparent 1.5px);
+  background-repeat: no-repeat;
+  background-position:
+    20px 90px,
+    50px 60px,
+    90px 20px;
+  pointer-events: none;
+  z-index: 0;
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.25));
+}

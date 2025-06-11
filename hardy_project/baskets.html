@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HARDY BUSINESS - Vente de baskets</title>
+  <style>
+    /* ----- Reset et bases ----- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #eaeaea;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: -50px;
+      left: -50px;
+      width: 150%;
+      height: 150%;
+      background: radial-gradient(circle at 20% 30%, rgba(255, 100, 100, 0.05) 0%, transparent 40%),
+                  radial-gradient(circle at 80% 70%, rgba(100, 200, 255, 0.04) 0%, transparent 50%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* ----- Barre du haut ----- */
+    .topbar {
+      width: 100%;
+      padding: 15px 30px;
+      background-color: #1a1a1a;
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .topbar .left {
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .topbar .right {
+      font-size: 1rem;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+
+    /* ----- Contenu principal ----- */
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    h1.big_title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+      display: inline-block;
+      padding-bottom: 8px;
+      color: #ffffff;
+      position: relative;
+    }
+
+    h1.big_title::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: #444;
+      margin: 8px auto 0 auto;
+      border-radius: 2px;
+    }
+
+    h2 {
+      font-weight: 600;
+      color: #bbbbbb;
+      margin-bottom: 40px;
+    }
+
+    /* ----- Grille de produits ----- */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 24px;
+    }
+
+    .product {
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      padding: 15px;
+    }
+
+    .product img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      transition: filter 0.3s ease;
+    }
+
+    .product img:hover {
+      filter: brightness(1.05);
+    }
+
+    .price {
+      font-weight: 700;
+      color: #ff7070;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+
+    .product a {
+      display: inline-block;
+      background-color: #ff7070;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+
+    .product a:hover {
+      background-color: #e94c4c;
+    }
+
+    /* ----- Responsive design ----- */
+    @media (max-width: 900px) {
+      .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      h1.big_title {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Barre de navigation -->
+  <header class="topbar">
+    <div class="left">BASKETS</div>
+    <div class="right">HARDY SHOPPING</div>
+  </header>
+
+  <!-- Contenu principal -->
+  <div class="container">
+    <h1 class="big_title">HARDY SHOPPING</h1>
+    <h2>KETCHS (BASKETS)</h2>
+
+    <div class="grid-container">
+      <!-- Les 25 produits -->
+      <!-- Remplace les images et modifie les noms si besoin -->
+
+      <div class="product"><img src="img1.jpg" alt="Basket 1" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+1">Commander</a></div>
+      <div class="product"><img src="img2.jpg" alt="Basket 2" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+2">Commander</a></div>
+      <div class="product"><img src="img3.jpg" alt="Basket 3" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+3">Commander</a></div>
+      <div class="product"><img src="img4.jpg" alt="Basket 4" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+4">Commander</a></div>
+      <div class="product"><img src="img5.jpg" alt="Basket 5" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+5">Commander</a></div>
+      <div class="product"><img src="img6.jpg" alt="Basket 6" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+6">Commander</a></div>
+      <div class="product"><img src="img7.jpg" alt="Basket 7" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+7">Commander</a></div>
+      <div class="product"><img src="img8.jpg" alt="Basket 8" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+8">Commander</a></div>
+      <div class="product"><img src="img9.jpg" alt="Basket 9" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+9">Commander</a></div>
+      <div class="product"><img src="img10.jpg" alt="Basket 10" /><p class="price">25 USD</p><a href="commander.html?produit=Basket+10">Commander</a></div>
+      <div class="product"><img src="img11.jpg" alt="Basket 11" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+11">Commander</a></div>
+      <div class="product"><img src="img12.jpg" alt="Basket 12" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+12">Commander</a></div>
+      <div class="product"><img src="img13.jpg" alt="Basket 13" /><p class="price">25 USD</p><a href="commander.html?produit=Basket+13">Commander</a></div>
+      <div class="product"><img src="img14.jpg" alt="Basket 14" /><p class="price">25 USD</p><a href="commander.html?produit=Basket+14">Commander</a></div>
+      <div class="product"><img src="img15.jpg" alt="Basket 15" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+15">Commander</a></div>
+      <div class="product"><img src="img16.jpg" alt="Basket 16" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+16">Commander</a></div>
+      <div class="product"><img src="img17.jpg" alt="Basket 17" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+17">Commander</a></div>
+      <div class="product"><img src="img18.jpg" alt="Basket 18" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+18">Commander</a></div>
+      <div class="product"><img src="img19.jpg" alt="Basket 19" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+19">Commander</a></div>
+      <div class="product"><img src="img20.jpg" alt="Basket 20" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+20">Commander</a></div>
+      <div class="product"><img src="IMG-20250524-WA0029.jpg" alt="Basket 21" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+21">Commander</a></div>
+      <div class="product"><img src="IMG-20250516-WA0125.jpg" alt="Basket 22" /><p class="price">30 USD</p><a href="commander.html?produit=Basket+22">Commander</a></div>
+      <div class="product"><img src="IMG-20250529-WA0016.jpg" alt="Basket 23" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+23">Commander</a></div>
+      <div class="product"><img src="IMG-20250524-WA0038.jpg" alt="Basket 24" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+24">Commander</a></div>
+      <div class="product"><img src="IMG-20250524-WA0033.jpg" alt="Basket 25" /><p class="price">20 USD</p><a href="commander.html?produit=Basket+25">Commander</a></div>
+    </div>
+  </div>
+</body>
+</html>

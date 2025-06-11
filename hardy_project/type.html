@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HARDY BUSINESS - Boutique de vêtements</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset basique */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #111111, #000000);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 70px; /* Pour éviter que le contenu soit caché sous la navbar */
+    }
+
+    /* Navbar simple */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 70px;
+      background-color: #222;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 30px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+      z-index: 100;
+    }
+
+    .navbar .left,
+    .navbar .center,
+    .navbar .right {
+      user-select: none;
+    }
+
+    .navbar .center {
+      color: #f0a500;
+      font-size: 1.4rem;
+      font-weight: 800;
+      font-family: 'Lucida Sans', sans-serif;
+    }
+
+    /* Contenu principal */
+    .contenu {
+      max-width: 700px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(240, 165, 0, 0.3);
+    }
+
+    .big_title {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-family: 'Lucida Sans', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #f0f0f0;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      background-color: rgba(255, 255, 255, 0.1);
+      margin: 10px 0;
+      border-radius: 10px;
+      padding: 15px;
+      /* transition: background-color 0.3s;  Tu peux garder ou enlever */
+    }
+
+    /* Suppression de l'effet au survol */
+    ul li:hover {
+      /* Pas d'effet au hover */
+    }
+
+    ul li a {
+      text-decoration: none;
+      font-weight: 700;
+      color: white;
+      font-size: 1.1rem;
+      display: inline-block;
+    }
+
+    ul li.casse-grise {
+      background-color: rgba(200, 200, 200, 0.3);
+      color: black;
+    }
+
+    ul li.casse-grise a {
+      color: black;
+    }
+
+    ul li.casse-grise:hover {
+      /* Pas d'effet au hover */
+    }
+
+    /* Responsive simple */
+    @media (max-width: 600px) {
+      .navbar {
+        font-size: 1rem;
+        padding: 0 15px;
+      }
+      .navbar .center {
+        font-size: 1.2rem;
+      }
+      .contenu {
+        padding: 25px 20px;
+        max-width: 90%;
+      }
+      .big_title {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      ul li {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="left">TYPE (SORTE)</div>
+    <div class="center">BOUTIQUE EN LIGNE</div>
+    <div class="right">La qualité</div>
+  </div>
+
+  <div class="contenu">
+    <h1 class="big_title">HARDY SHOPPING</h1>
+    <h2>Nous proposons des vêtements pour toutes personnes</h2>
+    <p>Venez voir...</p>
+
+    <ul>
+      <li class="casse-grise"><a href="vetement.html">Vêtements pour homme</a></li>
+      <li><a href="femme.html">Vêtements pour femme</a></li>
+      <li><a href="baskets.html">Baskets</a></li>
+      <li><a href="accessoire.html">Accessoires</a></li>
+    </ul>
+  </div>
+
+</body>
+</html>
